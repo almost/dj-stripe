@@ -1583,11 +1583,11 @@ class Subscription(StripeModel):
             target_cls=SubscriptionItem, data=data, subscription=self, api_key=api_key
         )
 
-        self.default_tax_rates.set(
-            cls._stripe_object_to_default_tax_rates(
-                target_cls=TaxRate, data=data, api_key=api_key
-            )
-        )
+        # self.default_tax_rates.set(
+        #     cls._stripe_object_to_default_tax_rates(
+        #         target_cls=TaxRate, data=data, api_key=api_key
+        #     )
+        # )
 
 
 class SubscriptionItem(StripeModel):
